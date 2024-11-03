@@ -1,0 +1,19 @@
+.productDetail {
+   
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .widget {
+        display: flex;
+      
+        justify-content: space-between;
+
+    }

@@ -1,0 +1,10 @@
+.hero {
+    height: 12.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:whitesmoke;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
