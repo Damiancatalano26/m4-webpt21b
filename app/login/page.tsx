@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import LoginForm from "../../components/Login/LoginForm";
 
 const Page = () => {
@@ -19,7 +20,7 @@ const Page = () => {
 
       {/* Parte derecha con la imagen */}
       <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
-        <img
+        <Image
           alt="Imagen decorativa"
           src="https://i.pinimg.com/736x/60/1b/f8/601bf865cad153c1914fe75271b4b5d0.jpg"
           className="absolute inset-0 h-full w-full object-cover"

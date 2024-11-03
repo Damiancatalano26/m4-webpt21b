@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import RegisterForm from "../../components/Register/Register";
 
 const Page = () => {
@@ -19,7 +20,7 @@ const Page = () => {
 
       {/* Parte derecha con la imagen */}
       <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
-        <img 
+        <Image
           alt="Imagen decorativa de registro"
           src="https://talktowalle.com/wp-content/uploads/2024/02/A-futuristic-Apple-Teleport-Machine-Apple-products-Apple-Teleport-Machine-blending-Apples-sci-fi.webp"
           className="absolute inset-0 h-full w-full object-cover"

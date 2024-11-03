@@ -1,5 +1,6 @@
 
 "use client"
+import Image from 'next/image';
 import { Product } from "@/app/interfaces";
 import style from "./ProductDetail.module.css"
 import { useContext } from "react";
@@ -43,7 +44,7 @@ alert("Agregado")
     <article >
       <h1>{name}</h1>
       <div className={style.productDetail}>
-        <img src={image} alt={name} />
+        <Image src={image} alt={name} />
         
         <div className={style.info}>
         <p>{description}</p>

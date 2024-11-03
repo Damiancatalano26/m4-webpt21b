@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Image from "next/image";
+
 import UserWidget from "../UserWidget/UserWidget";
 
-
-const Navbar = () => { 
+const Navbar = () => {
   return (
     <header className="bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -10,15 +10,15 @@ const Navbar = () => {
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <a className="block text-teal-600 dark:text-teal-300" href="#">
               <span className="sr-only">Home</span>
-             
-              <img 
-                className="h-16" 
-                src="https://www.yieldmaxetfs.com/wp-content/uploads/2023/07/apple-icon.png" 
+
+              <Image
+                className="h-16"
+                src="https://www.yieldmaxetfs.com/wp-content/uploads/2023/07/apple-icon.png"
                 alt="Logo"
               />
             </a>
           </div>
-  
+
           <div className="md:flex md:items-center md:gap-12">
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
@@ -30,7 +30,7 @@ const Navbar = () => {
                     Inicio
                   </a>
                 </li>
-  
+
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
@@ -39,7 +39,7 @@ const Navbar = () => {
                     Productos
                   </a>
                 </li>
-  
+
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
@@ -48,7 +48,7 @@ const Navbar = () => {
                     Detalle Productos
                   </a>
                 </li>
-  
+
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
@@ -57,7 +57,7 @@ const Navbar = () => {
                     Dashboard
                   </a>
                 </li>
-  
+
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
@@ -66,7 +66,7 @@ const Navbar = () => {
                     Carrito
                   </a>
                 </li>
-  
+
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
@@ -77,7 +77,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </nav>
-  
+
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
                 <a
@@ -86,7 +86,7 @@ const Navbar = () => {
                 >
                   Login
                 </a>
-  
+
                 <div className="hidden sm:flex">
                   <a
                     className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
@@ -96,11 +96,9 @@ const Navbar = () => {
                   </a>
                 </div>
               </div>
-  
+
               <div className="block md:hidden">
-                <button
-                  className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
-                >
+                <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="size-5"
@@ -109,15 +107,18 @@ const Navbar = () => {
                     stroke="currentColor"
                     strokeWidth="2"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
                   </svg>
                 </button>
               </div>
             </div>
           </div>
-          <UserWidget/>
+          <UserWidget />
         </div>
-    
       </div>
     </header>
   );
