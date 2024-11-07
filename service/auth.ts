@@ -1,10 +1,10 @@
 import { UserData, UserLogin } from "@/app/interfaces"
 
-const appiUrl = process.env.APPI_URL || "http://localhost:3001"
+const apiUrl = process.env.APPI_URL || "http://localhost:3001"
 
 
 export const register = async (data: UserData) => {
- const res = await fetch(`${appiUrl}/users/register`, {
+ const res = await fetch(`${apiUrl}/users/register`, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
@@ -15,7 +15,7 @@ export const register = async (data: UserData) => {
 }
 
 export const login = async (data: UserLogin) => {
-    const res = await fetch(`${appiUrl}/users/login`, {
+    const res = await fetch(`${apiUrl}/users/login`, {
        method: "POST",
        body: JSON.stringify(data),
        headers: {

@@ -2,12 +2,12 @@
 import { Product } from "@/app/interfaces";
 import { productsMock } from "@/app/mocks/products";
 const ffProductsMock = process.env.FF_PRODUCTS_MOCK || false;
-const appiUrl = process.env.APPI_URL || "http://localhost:3001"
+const apiUrl = process.env.APPI_URL || "http://localhost:3001"
 
 export const getProducts = async (): Promise<Product[]> => {
   let isFetchFailing = false;
 
-  const res = await fetch(appiUrl+"/products", {
+  const res = await fetch(apiUrl+"/products", {
     cache: "no-store",
   }).then((res) => res.json())
   .catch(() => (isFetchFailing = true));
@@ -35,12 +35,12 @@ import { Product } from "@/app/interfaces";
 import { productsMock } from "@/app/mocks/products";
 
 const ffProductsMock = process.env.FF_PRODUCTS_MOCK || false;
-const appiUrl = process.env.API_URL || "http://localhost:3001";
+const apiUrl = process.env.API_URL;
 
 export const getProducts = async (): Promise<Product[]> => {
   let isFetchFailing = false;
 
-  const res = await fetch(appiUrl + "/products", {
+  const res = await fetch(apiUrl + "/products", {
     cache: "no-store",
   })
     .then((res) => res.json())
