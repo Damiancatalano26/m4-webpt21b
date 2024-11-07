@@ -5,9 +5,10 @@ const Footer = () => {
     <footer className="bg-white lg:grid lg:grid-cols-5 dark:bg-gray-900 pt-40 font-serif ">
       <div className="relative block h-32 lg:col-span-2 lg:h-full">
         <Image
-          alt=""
           src="https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2024/03/19/productos-apple.jpeg"
-          className="absolute inset-0 h-80 w-full object-cover"
+          alt="Productos de Apple"
+          width={800} // especifica un valor adecuado
+          height={450} // especifica un valor adecuado
         />
       </div>
 

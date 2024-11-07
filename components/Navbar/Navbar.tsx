@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 import UserWidget from "../UserWidget/UserWidget";
 
@@ -10,11 +10,12 @@ const Navbar = () => {
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <a className="block text-teal-600 dark:text-teal-300" href="#">
               <span className="sr-only">Home</span>
-
+              
               <Image
-                className="h-16"
                 src="https://www.yieldmaxetfs.com/wp-content/uploads/2023/07/apple-icon.png"
-                alt="Logo"
+                alt="Icono de Apple"
+                width={50} // o el valor adecuado
+                height={50} // o el valor adecuado
               />
             </a>
           </div>
