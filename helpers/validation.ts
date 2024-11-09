@@ -29,8 +29,11 @@ export const validateAddress = (address: string) => {
 };
 
 export const validatePhone = (phone: string) => {
-  if (!validator.isMobilePhone(phone, "es-AR")) {
+  const phoneRegex = /^[0-9]{10,11}$/;
+  if (!phoneRegex.test(phone)) {
     return "Número de teléfono no válido.";
   }
   return "";
 };
+
+

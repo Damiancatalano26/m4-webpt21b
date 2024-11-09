@@ -29,7 +29,7 @@ const page = async () => {
       {Array.isArray(products) ? (
         products.map((product, i) => <Card key={i} {...product} />)
       ) : (
-        <p>No products available</p>
+        <p>No hay productos disponibles</p>
       )}
     </CardList>
   );

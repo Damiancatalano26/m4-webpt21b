@@ -57,8 +57,8 @@ const Page = () => {
         <Image
           alt="Imagen decorativa de registro"
           src="https://talktowalle.com/wp-content/uploads/2024/02/A-futuristic-Apple-Teleport-Machine-Apple-products-Apple-Teleport-Machine-blending-Apples-sci-fi.webp"
-          width={1200} // Puedes ajustar este valor
-          height={800} // Puedes ajustar este valor
+          width={1200} 
+          height={800} 
           className="absolute inset-0 h-full w-full object-cover"
         />
       </div>

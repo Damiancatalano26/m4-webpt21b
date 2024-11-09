@@ -3,7 +3,7 @@ import { AuthContext } from "@/contexts/authContext";
 import { validateEmail, validatePassword } from "@/helpers/validation";
 import { login } from "@/service/auth";
 import { useRouter } from "next/navigation";
-
+import {Toaster, toast} from "sonner"
 import { ChangeEvent, useContext, useEffect, useState } from "react";
 
 const LoginForm = () => {
@@ -20,9 +20,9 @@ const LoginForm = () => {
     e.preventDefault();
     const res = await login(data);
     if (res.statusCode) {
-      alert(res.message);
+      toast.error(res.message);
     } else {
-      alert("Inicio de sesión exitoso");
+      toast.success("Inicio de sesión exitoso");
       setUser(res)
       router.push("/");
     }
@@ -48,6 +48,8 @@ const LoginForm = () => {
   }, [data]);
 
   return (
+    <div>
+    <Toaster position="top-center" richColors  />
     <form
       action="#"
       className="mx-auto mb-0 mt-8 max-w-md space-y-4"
@@ -151,6 +153,7 @@ const LoginForm = () => {
         </button>
       </div>
     </form>
+  </div>
   );
 };
 
