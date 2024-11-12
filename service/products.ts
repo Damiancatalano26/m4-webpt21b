@@ -35,7 +35,7 @@ import { Product } from "@/app/interfaces";
 import { productsMock } from "@/app/mocks/products";
 
 const ffProductsMock = process.env.FF_PRODUCTS_MOCK || false;
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 export const getProducts = async (): Promise<Product[]> => {
   let isFetchFailing = false;

@@ -8,41 +8,43 @@ export interface Cart {
   price: number;
 }
 
-// Crea interface del context
+// Interfaz del contexto
 interface CartContextProps {
   cart: Cart[];
   setCart: (cart: Cart[]) => void;
   emptyCart: () => void;
+  removeFromCart: (index: number) => void; // Añadir la función para eliminar un producto
 }
 
-// Creo el contexto, donde guardaremos los datos
 export const CartContext = createContext<CartContextProps>({
   cart: [],
   setCart: () => {},
   emptyCart: () => {},
+  removeFromCart: () => {}, // Valor inicial vacío para la función
 });
 
-// Crear el provider
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const [cart, setCart] = useState<Cart[]>([]);
 
-  // Guardar el carrito en localStorage cada vez que cambia
   useEffect(() => {
     if (cart.length > 0) {
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   }, [cart]);
 
-  // Cargar el carrito desde localStorage al inicio
   useEffect(() => {
     const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
     setCart(localCart);
   }, []);
 
-  // Vaciar el carrito
   const emptyCart = () => {
     localStorage.removeItem("cart");
     setCart([]);
+  };
+
+  // Función para eliminar un producto del carrito
+  const removeFromCart = (index: number) => {
+    setCart((prevCart) => prevCart.filter((_, i) => i !== index));
   };
 
   return (
@@ -51,6 +53,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         cart,
         setCart,
         emptyCart,
+        removeFromCart, // Agregar la función en el provider
       }}
     >
       {children}
